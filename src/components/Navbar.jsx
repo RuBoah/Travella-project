@@ -8,12 +8,7 @@ const Navbar = () => {
     <nav className="w-full px-4 md:px-10 py-4 shadow-md flex justify-between items-center bg-white">
         <a href="/" className="text-2xl font-bold text-[#00A8CC] cursor-pointer">Travella</a> 
 
-        <div className="hidden md:flex gap-6 text-gray-600 font-medium">
-        <a href="#explore" className="hover:text-[#00A8CC]">Explore</a>
-        <a href="#destinations" className="hover:text-[#00A8CC]">Destinations</a>
-        <a href="#experiences" className="hover:text-[#00A8CC]">Experiences</a>
-      </div>
-
+       
       <div className="flex items-center gap-4">
         <a href="#host" className="hidden md:inline text-sm font-medium hover:underline text-gray-700">
           Become a Host

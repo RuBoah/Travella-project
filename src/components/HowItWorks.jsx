@@ -5,7 +5,7 @@ const HowItWorks = () => {
   return (
     <section className="py-8 sm:py-12 md:py-16 px-4 bg-gray-50  bg-cover  ">
       <div className="max-w-6xl mx-auto">
-        {/* Section Heading */}
+       
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">How Travella Works</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-xl sm:max-w-2xl mx-auto px-4">
@@ -13,9 +13,9 @@ const HowItWorks = () => {
           </p>
         </div>
         
-        {/* Steps for medium and larger screens */}
+       
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {/* Step 1 */}
+      
           <div className="flex flex-col items-center text-center relative">
             <div className="bg-white p-4 sm:p-6 rounded-full shadow-md mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
               <Search className="h-6 w-6 sm:h-8 sm:w-8 text-[#00A8CC]" />
@@ -32,7 +32,7 @@ const HowItWorks = () => {
             <p className="text-sm sm:text-base text-gray-600">Browse through thousands of stunning properties across the globe. Filter by location, dates, amenities and more.</p>
           </div>
           
-          {/* Step 2 */}
+        
           <div className="flex flex-col items-center text-center relative">
             <div className="bg-white p-4 sm:p-6 rounded-full shadow-md mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
               <Home className="h-6 w-6 sm:h-8 sm:w-8 text-[#00A8CC]" />
@@ -49,7 +49,7 @@ const HowItWorks = () => {
             <p className="text-sm sm:text-base text-gray-600">Explore detailed listings with high-quality photos, authentic reviews, and comprehensive information about the accommodations.</p>
           </div>
           
-          {/* Step 3 */}
+      
           <div className="flex flex-col items-center text-center relative">
             <div className="bg-white p-4 sm:p-6 rounded-full shadow-md mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
               <Calendar className="h-6 w-6 sm:h-8 sm:w-8 text-[#00A8CC]" />
@@ -66,7 +66,7 @@ const HowItWorks = () => {
             <p className="text-sm sm:text-base text-gray-600">Reserve your stay with our simple booking process. Enjoy transparent pricing with no hidden fees.</p>
           </div>
           
-          {/* Step 4 */}
+          
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-4 sm:p-6 rounded-full shadow-md mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
               <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-[#00A8CC]" />
@@ -83,9 +83,9 @@ const HowItWorks = () => {
           </div>
         </div>
         
-        {/* Mobile version */}
+       
         <div className="md:hidden space-y-4 sm:space-y-6">
-          {/* Step 1 */}
+         
           <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 text-center">
             <div className="bg-rose-100 p-3 sm:p-4 rounded-full inline-flex items-center justify-center mb-4 sm:mb-6">
               <Search className="h-5 w-5 sm:h-6 sm:w-6 text-[#00A8CC]" />
@@ -97,7 +97,7 @@ const HowItWorks = () => {
             <p className="text-sm sm:text-base text-gray-600">Browse through thousands of stunning properties across the globe. Filter by location, dates, amenities and more.</p>
           </div>
           
-          {/* Step 2 */}
+          
           <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 text-center">
             <div className="bg-rose-100 p-3 sm:p-4 rounded-full inline-flex items-center justify-center mb-4 sm:mb-6">
               <Home className="h-5 w-5 sm:h-6 sm:w-6 text-[#00A8CC]" />
@@ -109,7 +109,7 @@ const HowItWorks = () => {
             <p className="text-sm sm:text-base text-gray-600">Explore detailed listings with high-quality photos, authentic reviews, and comprehensive information about the accommodations.</p>
           </div>
           
-          {/* Step 3 */}
+         
           <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 text-center">
             <div className="bg-rose-100 p-3 sm:p-4 rounded-full inline-flex items-center justify-center mb-4 sm:mb-6">
               <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-[#00A8CC]" />
@@ -121,7 +121,7 @@ const HowItWorks = () => {
             <p className="text-sm sm:text-base text-gray-600">Reserve your stay with our simple booking process. Enjoy transparent pricing with no hidden fees.</p>
           </div>
           
-          {/* Step 4 */}
+        
           <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 text-center">
             <div className="bg-rose-100 p-3 sm:p-4 rounded-full inline-flex items-center justify-center mb-4 sm:mb-6">
               <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-[#00A8CC]" />
@@ -134,7 +134,7 @@ const HowItWorks = () => {
           </div>
         </div>
         
-        {/* Call to Action */}
+      
         <div className="mt-8 sm:mt-12 md:mt-16 text-center">
           <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 md:p-12 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto">
             <div className="flex justify-center mb-4 sm:mb-6">

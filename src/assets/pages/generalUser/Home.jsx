@@ -1,11 +1,13 @@
 import React from "react";
-import DestinationCard from "../../../components/DestinationCard";
+
 import HowItWorks from "../../../components/HowItWorks";
 import Testimonials from "../../../components/Testimonials";
+import DestinationCard from "../../../components/DestinationCard";
+import PropertyCard from "../../../components/PropertyCard";
 
 const Home = () => {
   return (
-    <div className="bg-[url(assets/images/home1.png)] bg-cover bg-center bg-fixed">
+    <div className="bg-[url(assets/images/rent.png)] bg-cover bg-center bg-fixed ">
       <section className="relative h-screen">
         <div className="absolute inset-0 "></div>
 
@@ -45,10 +47,21 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+<section>
+      <h1 className="text-white text-4xl font-bold animate-bounce text-center py-10">Popular Destinations</h1>
    
-   <DestinationCard/>
+      <div className="  ">
+      <DestinationCard/> 
+     
+      </div>
 
+      <p className="  text-white text-4xl font-bold animate-bounce text-center py-10">Featured Listings</p>
+   <div className=" grid grid-cols-3 gap-4 justify-items-center ">
+   <PropertyCard/>   
+   <PropertyCard/>
+   <PropertyCard/> 
+      </div>
+      </section>     
   <HowItWorks/>
  <Testimonials/>
 
