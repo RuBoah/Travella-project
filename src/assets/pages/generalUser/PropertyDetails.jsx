@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  
   StarIcon,
   WifiIcon,
   HomeIcon,
@@ -54,8 +53,13 @@ const PropertyDetails = () => {
             </h1>
             <p className="text-gray-600">Accra, Ghana</p>
             <p className="text-xl font-semibold mt-2">
-              $120 <span className="text-base font-normal">/ night</span>
+              GH₵2200 <span className="text-base font-normal">/ night</span>
             </p>
+            <div className="mt-4">
+              <a href="/bookings"><button className="bg-[#00A8CC] hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition duration-300">
+                Make a Booking
+              </button></a>
+            </div>
           </div>
 
           <div className="space-y-2">

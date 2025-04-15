@@ -7,6 +7,7 @@ import Properties from "./assets/pages/generalUser/Properties";
 import PropertyDetails from "./assets/pages/generalUser/PropertyDetails";
 import Login from "./assets/pages/auth/Login";
 import SignUp from "./assets/pages/auth/SignUp";
+import Bookings from "./assets/pages/guestUser/Bookings";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route index={true} element={<Home />} />
               <Route path="/properties" element={<Properties />} />
           <Route path="/propertydetails" element={<PropertyDetails />} />
+          <Route path="/bookings" element={<Bookings />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />

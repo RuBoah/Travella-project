@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-700 ">
     <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-5 gap-8">
-      {/* Brand */}
+   
       <div className="col-span-2 md:col-span-1">
-        <h2 className="text-2xl font-bold text-blue-600">Travella</h2>
+        <h2 className="text-2xl font-bold text-[#00A8CC]">Travella</h2>
         <p className="mt-2 text-sm">Discover beautiful places and unique stays around the world.</p>
         <div className="flex gap-3 mt-4">
           <Facebook className="w-5 h-5 cursor-pointer hover:text-blue-500" />
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Explore */}
+      
       <div>
         <h4 className="font-semibold mb-3">Explore</h4>
         <ul className="space-y-2 text-sm">
@@ -26,7 +26,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Support */}
+     
       <div>
         <h4 className="font-semibold mb-3">Support</h4>
         <ul className="space-y-2 text-sm">
@@ -37,7 +37,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Hosting */}
+      
       <div>
         <h4 className="font-semibold mb-3">Hosting</h4>
         <ul className="space-y-2 text-sm">
@@ -48,7 +48,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Legal */}
+     
       <div>
         <h4 className="font-semibold mb-3">Legal</h4>
         <ul className="space-y-2 text-sm">
@@ -59,7 +59,7 @@ const Footer = () => {
       </div>
     </div>
 
-    {/* Bottom bar */}
+   
     <div className="border-t border-gray-300 mt-6 py-4 text-center text-sm text-gray-500">
       © {new Date().getFullYear()} Travella. All rights reserved. | Ghana
     </div>
