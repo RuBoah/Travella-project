@@ -144,9 +144,7 @@ const HowItWorks = () => {
             <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">
               Join thousands of happy travelers who found their perfect stay with Travella.
             </p>
-            <button className="bg-[#00A8CC] hover:bg-text-[#00A8CD] text-white font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-colors duration-300 text-sm sm:text-base">
-              Start Exploring
-            </button>
+            
           </div>
         </div>
       </div>

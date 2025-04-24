@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import globe from "../../images/globe.png";
+import axios from "axios";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setErrorMsg("");
+
+    try {
+      const response = await axios.post("/api/login", {
+        email,
+        password,
+      });
+
+      const { token, user } = response.data;
+      console.log("Login successful:", user);
+
+      localStorage.setItem("token", token);
+    } catch (error) {
+      console.error("Login failed:", error);
+      setErrorMsg("Invalid email or password.");
+    }
+  };
+
   return (
-    <div>
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
       <div className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-lg overflow-hidden max-w-5xl w-full">
         <div className="w-full lg:w-1/2 p-8 space-y-6 flex flex-col justify-center">
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleLogin}>
             <div>
               <label
                 htmlFor="email"
@@ -19,11 +43,13 @@ const Login = () => {
                 type="email"
                 id="email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-  
+
             <div>
               <label
                 htmlFor="password"
@@ -35,18 +61,22 @@ const Login = () => {
                 type="password"
                 id="password"
                 name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-  
+
+            {errorMsg && <p className="text-red-500 text-sm">{errorMsg}</p>}
+
             <button
               type="submit"
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
             >
               Log In
             </button>
-  
+
             <div className="text-center text-sm text-gray-600">
               Don't have an account?{" "}
               <a
@@ -58,7 +88,7 @@ const Login = () => {
             </div>
           </form>
         </div>
-  
+
         <div className="hidden lg:block lg:w-1/2">
           <img
             src={globe}
@@ -68,8 +98,6 @@ const Login = () => {
         </div>
       </div>
     </div>
-  </div>
-  
   );
 };
 
