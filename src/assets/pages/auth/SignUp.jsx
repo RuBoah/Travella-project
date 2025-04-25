@@ -33,7 +33,7 @@ console.log(response.data);
       // localStorage.setItem("user", JSON.stringify(user));
       if (response.status == 201) {
        console.log("Sign Up Successfull");
-        navigate("/makebookings");
+        navigate("/properties");
       }
     } catch (err) {
       console.error("Signup error:", err);

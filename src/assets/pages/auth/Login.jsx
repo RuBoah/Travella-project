@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import globe from "../../images/globe.png";
-import axios from "axios";
+import { apiLogin } from "../../services/auth";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,15 +12,15 @@ const Login = () => {
     setErrorMsg("");
 
     try {
-      const response = await axios.post("/api/login", {
-        email,
-        password,
-      });
-
-      const { token, user } = response.data;
+      const response = await apiLogin({ email, password });
+      console.log(response.data);
       console.log("Login successful:", user);
 
-      localStorage.setItem("token", token);
+    
+      if (response.status == 200) {
+        console.log("Sign Up Successfull");
+       
+       }
     } catch (error) {
       console.error("Login failed:", error);
       setErrorMsg("Invalid email or password.");

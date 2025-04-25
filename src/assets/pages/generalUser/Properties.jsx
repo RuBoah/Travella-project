@@ -3,6 +3,8 @@ import PropertyCard from "../../../components/PropertyCard";
 import house from "../../../assets/images/house.png"; 
 import { apiGetProperties } from "../../services/properties";
 
+
+
 const Properties = () => {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
