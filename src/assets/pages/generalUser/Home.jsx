@@ -64,6 +64,7 @@ const Home = () => {
           <div className="w-16 h-1 bg-[#00A8CC] mx-auto mt-2 rounded"></div>
         </div>
         <div className="grid grid-cols-3 gap-4 justify-items-center">
+          
           <PropertyCard />
           <PropertyCard />
           <PropertyCard />

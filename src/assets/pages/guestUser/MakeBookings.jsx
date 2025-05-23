@@ -9,7 +9,7 @@ export default function BookingPage() {
     guests: 1,
   });
   const [success, setSuccess] = useState(false);
-  const navigate = useNavigate(); // For navigation
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,7 +22,7 @@ export default function BookingPage() {
   };
 
   const goBack = () => {
-    navigate("/properties"); // Change this path based on your actual route
+    navigate("/properties");
   };
 
   return (

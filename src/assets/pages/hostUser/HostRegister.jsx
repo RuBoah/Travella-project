@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // <-- import this
+import { useNavigate } from "react-router-dom";
 
 const HostRegister = () => {
-  const navigate = useNavigate(); // <-- initialize here
+  const navigate = useNavigate(); 
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -24,7 +24,7 @@ const HostRegister = () => {
     console.log("Submitted Host Info:", formData);
     alert("Thanks for signing up to become a host!");
 
-    // 👇 Redirect to dashboard after submission
+   
     navigate("/dashboard");
   };
 
@@ -34,7 +34,7 @@ const HostRegister = () => {
         Host Registration
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* form fields stay the same */}
+       
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Full Name

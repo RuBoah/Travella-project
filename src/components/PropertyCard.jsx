@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import placeholderHouse from "../assets/images/house.png";
 
-const PropertyCard = ({ property: fetchedProperty }) => {
-  const [property] = useState(fetchedProperty);
+const PropertyCard = ({ property: initialProperty }) => {
+  const [propertyState] = useState(initialProperty);
 
   const getMainPhoto = () => {
-    if (property?.photos?.length > 0) {
-      return property.photos[0]; // or use a random one if preferred
+    if (propertyState?.photos?.length > 0) {
+      return propertyState.photos[0]; 
     }
     return placeholderHouse;
   };
@@ -42,12 +42,12 @@ const PropertyCard = ({ property: fetchedProperty }) => {
 
   return (
     <div
-      key={property?.id}
+      key={propertyState?.id}
       className="relative bg-white rounded-lg shadow-md overflow-hidden w-full"
     >
       <img
         src={getMainPhoto()}
-        alt={property?.title}
+        alt={propertyState?.title}
         className="w-full h-60 object-cover"
         onError={(e) => {
           e.target.src = placeholderHouse;
@@ -56,29 +56,29 @@ const PropertyCard = ({ property: fetchedProperty }) => {
 
       <div className="p-4 space-y-1">
         <h1 className="text-lg font-semibold text-gray-800">
-          {property?.title}
+          {propertyState?.title}
         </h1>
         <p className="text-sm text-gray-500">
           Hosted by{" "}
           <span className="font-medium text-gray-700">
-            {property?.host?.username}
+            {propertyState?.host?.username}
           </span>
         </p>
-        <p className="text-sm text-gray-500">{property?.location?.city}</p>
+        <p className="text-sm text-gray-500">{propertyState?.location?.city}</p>
 
         <p className="text-sm text-gray-700">
           <span className="text-blue-600 font-medium">
-            GH₵{property?.pricePerNight}{" "}
+            GH₵{propertyState?.pricePerNight}{" "}
           </span>
           / night
         </p>
 
         <div className="flex items-center space-x-1 mt-2">
-          {renderStars(property?.rating || 4)}
+          {renderStars(propertyState?.rating || 4)}
         </div>
       </div>
 
-      <Link to={`/propertydetails/${property?.id}`}>
+      <Link to={`/propertydetails/${propertyState?.id}`}>
         <button className="absolute bottom-4 right-4 px-4 py-2 text-white bg-[#00A8CC] rounded hover:bg-blue-700 transition duration-200 w-full mx-4 sm:w-auto sm:mx-0 sm:right-4">
           View Details
         </button>
